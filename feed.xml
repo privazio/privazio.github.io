@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-01-18T22:22:10+01:00</updated><id>http://localhost:4000/</id><title type="html">Privazio</title><subtitle>A data-center class private cloud.</subtitle><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><entry><title type="html">New library: python bindings for opennebula</title><link href="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/" rel="alternate" type="text/html" title="New library: python bindings for opennebula" /><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><id>http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula</id><content type="html" xml:base="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/">&lt;h1 id=&quot;heading-open-nebula-python-bindings&quot;&gt;Open Nebula Python Bindings&lt;/h1&gt;
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; is a fantastic cloud management platform that incorporates
+a key feature: &lt;em&gt;simplicity&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; seems the ideal cloud engine for &lt;a href=&quot;/blog/2017/05/23/starting-privazio/&quot; title=&quot;Starting Privazio!&quot;&gt;Privazio&lt;/a&gt;.
+In fact I was very happy to see that there is a similar
+project already out there: &lt;a target=&quot;_blank&quot; href=&quot;http://clox.cloud&quot; title=&quot;Get Your Cloud Just In A Box&quot;&gt;clox.cloud&lt;/a&gt; that can run OpenNebula
+on two &lt;a target=&quot;_blank&quot; href=&quot;https://www.raspberrypi.org/&quot; title=&quot;Teach learn and make with Rasberry Pi&quot;&gt;Raspbery Pi 3&lt;/a&gt; using lightweight virtualization from &lt;a target=&quot;_blank&quot; href=&quot;https://linuxcontainers.org/&quot; title=&quot;Infrastructure for container projects&quot;&gt;LXD&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I want to use &lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; as the Cloud Management platform for Privazio, however, I also want
+to automate its configuration with &lt;a target=&quot;_blank&quot; href=&quot;https://www.ansible.com/&quot; title=&quot;Ansible: Simple IT Automation&quot;&gt;Ansible&lt;/a&gt;. Ansible plugins will therefore
+be required.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; is very actively been developed, and as such APIs do change. However, OpenNebula XML-RPC
+API includes XSD specifications.&lt;/p&gt;
+
+&lt;p&gt;Pyone has been developed with maintainability in mind, it uses proxy objects and binding generators
+so that it will be easy to maintain as OpenNebula further evolves.&lt;/p&gt;
+
+&lt;p&gt;Pyone will be used to implement &lt;a target=&quot;_blank&quot; href=&quot;https://www.ansible.com/&quot; title=&quot;Ansible: Simple IT Automation&quot;&gt;Ansible&lt;/a&gt; modules for cloud management.&lt;/p&gt;
+
+&lt;p&gt;Checkout &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/privazio/pyone&quot; title=&quot;Open Nebula XML-RPC Python Bindings&quot;&gt;Pyone in Github!&lt;/a&gt;&lt;/p&gt;</content><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><category term="python" /><category term="opennebula" /><category term="api" /><summary type="html">Open Nebula Python Bindings OpenNebula is a fantastic cloud management platform that incorporates a key feature: simplicity.</summary></entry><entry><title type="html">New package: native Handlebars for Alpine Linux</title><link href="http://localhost:4000/blog/2017/07/26/handlebars-for-apine/" rel="alternate" type="text/html" title="New package: native Handlebars for Alpine Linux" /><published>2017-07-26T00:00:00+02:00</published><updated>2017-07-26T00:00:00+02:00</updated><id>http://localhost:4000/blog/2017/07/26/handlebars-for-apine</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/26/handlebars-for-apine/">&lt;h2 id=&quot;heading-configuring-docker-images&quot;&gt;Configuring Docker Images&lt;/h2&gt;
+
+&lt;p&gt;Docker images are great because they encapsulate services making them easy to
+distribute and deploy.&lt;/p&gt;
+
+&lt;p&gt;However these services require configuration information, in one way or another.&lt;/p&gt;
+
+&lt;p&gt;Docker makes it easy to pass variables, but normally those variables need to be
+translated into configuration files.&lt;/p&gt;
+
+&lt;p&gt;There isn't a clean solution for doing this, the typical options are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shell scripts / commands to build configuration files from environment variables.
+This ends up as spaghetti code, while the configuration options are limited.&lt;/li&gt;
+  &lt;li&gt;Mount configuration files that are generated externally, using for example Ansible.
+This method is cleaner, and configuration files can be more complex. However by
+using this method docker images stop being so well encapsulated / portable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-another-approach&quot;&gt;Another approach&lt;/h2&gt;
+
+&lt;p&gt;I think docker images should continue to be portable and well packaged. There should
+be a clean interface between your docker image and your automation tool, such as
+ansible.&lt;/p&gt;
+
+&lt;p&gt;The obvious solution is to use a lightweight templating system such as &lt;a target=&quot;_blank&quot; href=&quot;http://handlebarsjs.com/&quot; title=&quot;Handlebars.js: Minimal Templating on Steroids&quot;&gt;Handlerbars&lt;/a&gt; to generate the configuration
+files when the image is started.&lt;/p&gt;
+
+&lt;p&gt;The problem then is that most templating systems require their own stack: Java, Ruby, Python
+Javascript, etc. An Alpine Lunux image is currently 2Mb download, while any of this stacks will
+easily reach 100Mb. At first it seems like doing some shell scripting is not such a bad idea.&lt;/p&gt;
+
+&lt;p&gt;There is however an implementation of &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/jbboehr/handlebars.c&quot; title=&quot;C implementation of handlebars.js&quot;&gt;Handlerbars in C&lt;/a&gt;, which is also used for php-handlebars. It is robust and well developed/maintained.&lt;/p&gt;
+
+&lt;p&gt;We generated a package for Alpine Linux. The result is all the power of Handlerbars in just 125Kb.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-handlebards-for-apline&quot;&gt;Handlebards for Apline&lt;/h2&gt;
+
+&lt;p&gt;The package is in the testing repository you can try it by doing:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run your favorite Alpine container, for example:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; alpine-x86_64
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Enable the testing repository&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;http://dl-cdn.alpinelinux.org/alpine/edge/testing &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; /etc/apk/repositories
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install handlebars utilites&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;apk update
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;apk add handlebars-utils
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;And you are ready to test&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;handlebarsc
+Usage: handlebarsc &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--lex&lt;/span&gt;|--parse|--compile|--execute] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--data&lt;/span&gt; JSON_FILE] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;TEMPLATE]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This should allow for smarter docker images, without breaking their portability and
+encapsultation.&lt;/p&gt;</content><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><category term="linux" /><category term="alpine" /><category term="images" /><category term="container" /><category term="docker" /><category term="C" /><summary type="html">Configuring Docker Images</summary></entry><entry><title type="html">New tool: Alpine Release Info</title><link href="http://localhost:4000/blog/2017/05/27/alpine-release-info/" rel="alternate" type="text/html" title="New tool: Alpine Release Info" /><published>2017-05-27T00:00:00+02:00</published><updated>2017-05-27T00:00:00+02:00</updated><id>http://localhost:4000/blog/2017/05/27/alpine-release-info</id><content type="html" xml:base="http://localhost:4000/blog/2017/05/27/alpine-release-info/">&lt;p&gt;Docker is great, but I don't like that images at docker hub are not digitally signed.
+Those images are being installed around the globe, yet it is impossible to know what
+is it that you are ultimately downloading and whether it comes from the claimed source or not.
+Even in the case of &quot;Official&quot; images.&lt;/p&gt;
+
+&lt;p&gt;Alpine Linux provides metada and digital signatures for all their downloads.&lt;/p&gt;
+
+&lt;p&gt;If you produce images or containers based on Alpine Linux, this utility could help
+you:&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-alpine-linux-release-info&quot;&gt;Alpine Linux Release Info&lt;/h2&gt;
+
+&lt;p&gt;Command line utility to query Alpine Linux's distribution tree.&lt;/p&gt;
+
+&lt;p&gt;The targeted use case is the continuous delivery of products based on Alpine Linux such as Docker Images.&lt;/p&gt;
+
+&lt;p&gt;This script will deliver the latest release given branch, architecture, flavor, etc. There are many other parameters
+that can be queried such as: url to download, sha512, gpg signature, etc.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/privazio/alpine_release_info/master/doc/demo.gif&quot; alt=&quot;demo&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;To install the latest release of this utility:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;pip install alpine_release_info&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For help on the available parameters:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;alpine_release_info -h&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To query the download url for the latest release on the v3.5 branch for armhf architecture and minirootfs flavor:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;alpine_release_info -a armhf -b v3.5 -f alpine-minirootfs -q url&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><category term="linux" /><category term="alpine" /><category term="images" /><category term="container" /><category term="docker" /><summary type="html">Docker is great, but I don't like that images at docker hub are not digitally signed. Those images are being installed around the globe, yet it is impossible to know what is it that you are ultimately downloading and whether it comes from the claimed source or not. Even in the case of &quot;Official&quot; images.</summary></entry><entry><title type="html">Starting Privazio!</title><link href="http://localhost:4000/blog/2017/05/23/starting-privazio/" rel="alternate" type="text/html" title="Starting Privazio!" /><published>2017-05-23T00:00:00+02:00</published><updated>2017-05-23T00:00:00+02:00</updated><id>http://localhost:4000/blog/2017/05/23/starting-privazio</id><content type="html" xml:base="http://localhost:4000/blog/2017/05/23/starting-privazio/">&lt;p&gt;Today, I have decided to start Privazio, a private cloud for residential users,
+startups or workgroups with a special focus on privacy.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-background-and-motivation&quot;&gt;Background and motivation&lt;/h2&gt;
+
+&lt;p&gt;Why Pivazio?&lt;/p&gt;
+
+&lt;p&gt;At first, it was cool! You could just buy a domain name, setup Google Apps, open
+a few accounts here and there and you had a decent online presence for your startup
+or family at almost no cost.&lt;/p&gt;
+
+&lt;p&gt;No more racks or noisy servers, no data-center contracts,
+equipment renting, hardware failures. It was pretty cool!&lt;/p&gt;
+
+&lt;p&gt;Then came Snowden revelations and the &lt;em&gt;&quot;collect everything&quot;&lt;/em&gt; motto shocking the whole world. It became clear that it is
+fairly irresponsible to blindly hand control of data to third parties.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/personal-data.jpg&quot; alt=&quot;Personal Data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All those &quot;free&quot; services are paid in privacy currency.&lt;/p&gt;
+
+&lt;p&gt;As our lives become increasingly digital, it is very hard to understand the
+ramifications of handing our privacy.&lt;/p&gt;
+
+&lt;p&gt;We need to regain digital independence, and take back control of our own data.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-a-first-attempt&quot;&gt;A first attempt&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Public Clouds took us back to &quot;the mainframe&quot;, future affordability of
+computer hardware will once again decentralize computing.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It was very nice to hear historic VCs making this argument despite the hype and
+commercial success of pubic clouds.&lt;/p&gt;
+
+&lt;p&gt;Once the &lt;a target=&quot;_blank&quot; href=&quot;https://www.raspberrypi.org/&quot; title=&quot;Teach learn and make with Rasberry Pi&quot;&gt;Raspberry Pi&lt;/a&gt; first came out I understood that it would not take long
+before the previous statement would materialize in some shape or form, so I started
+bringing home my own infrastructure.&lt;/p&gt;
+
+&lt;p&gt;At the time, cloud platforms such as OpenStack were starting to be mature
+but they seemed too focused on running complex, multi-tenant data-centers.
+Three or four high spec servers were required before you could even start a single virtual
+machine.&lt;/p&gt;
+
+&lt;p&gt;A cocktail of Puppet + Linux + Libvirt + Lxd + &lt;a target=&quot;_blank&quot; href=&quot;https://www.raspberrypi.org/&quot; title=&quot;Teach learn and make with Rasberry Pi&quot;&gt;Raspberry Pi&lt;/a&gt; + L2 tunnels allowed me to
+get started with my own thing, at least as a hobby. I started regaining digital
+independence for my family and my startup company.&lt;/p&gt;
+
+&lt;p&gt;However it increasingly became hard to maintain. A few servers, dozen VMs,
+hundreds of containers. Lots of automation code…&lt;/p&gt;
+
+&lt;p&gt;During the past few years industry has been quickly converging with the vision above.
+On the hardware front, single board computers are increasingly powerful partly driven
+by mobile computing, affordable phones can now pack 8 CPUs and 6 GBs of RAM, powerful
+enough to provide digital presence to most of us.&lt;/p&gt;
+
+&lt;p&gt;On the software front, exciting platforms such as &lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;Open Nebula&lt;/a&gt; can deliver
+private, enterprise-class cloud computing and simplicity at the same time. &lt;a target=&quot;_blank&quot; href=&quot;https://docker.com&quot; title=&quot;Docker - Build, Ship, and Run Any App, Anywhere&quot;&gt;Docker&lt;/a&gt; and
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.ansible.com/&quot; title=&quot;Ansible: Simple IT Automation&quot;&gt;Ansible&lt;/a&gt; are also great enabling technologies that have reached maturity.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-what-privazio-should-be&quot;&gt;What Privazio should be&lt;/h2&gt;
+
+&lt;p&gt;Privazio should be an open source community effort to regain digital independence,
+packaged as a private cloud, capable of running on entry level, fanless hardware,
+powerful enough to serve most families and small businesses.&lt;/p&gt;
+
+&lt;p&gt;Privazio should make it trivial to establish and maintain digital presence by means of email, webs,
+blogs, forums, wikies… while retaining control of data, privacy. s&lt;/p&gt;
+
+&lt;p&gt;Between performance and privacy, privazio must chose the latter.&lt;/p&gt;</content><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><category term="privazio" /><category term="cloud" /><summary type="html">Today, I have decided to start Privazio, a private cloud for residential users, startups or workgroups with a special focus on privacy.</summary></entry></feed>

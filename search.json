@@ -1,0 +1,39 @@
+[
+  
+    {
+      "title"      : "New library: python bindings for opennebula",
+      "categories" : "sdk",
+      "tags"     : "python, opennebula, api",
+      "url"        : "/blog/2018/01/06/python-bindins-for-opennebula/",
+      "date"       : "2018-01-06 00:00:00 +0100",
+      "shortdate"  : "January 06, 2018"
+    } ,
+  
+    {
+      "title"      : "New package: native Handlebars for Alpine Linux",
+      "categories" : "tools",
+      "tags"     : "linux, alpine, images, container, docker, C",
+      "url"        : "/blog/2017/07/26/handlebars-for-apine/",
+      "date"       : "2017-07-26 00:00:00 +0200",
+      "shortdate"  : "July 26, 2017"
+    } ,
+  
+    {
+      "title"      : "New tool: Alpine Release Info",
+      "categories" : "tools",
+      "tags"     : "linux, alpine, images, container, docker",
+      "url"        : "/blog/2017/05/27/alpine-release-info/",
+      "date"       : "2017-05-27 00:00:00 +0200",
+      "shortdate"  : "May 27, 2017"
+    } ,
+  
+    {
+      "title"      : "Starting Privazio!",
+      "categories" : "news",
+      "tags"     : "privazio, cloud",
+      "url"        : "/blog/2017/05/23/starting-privazio/",
+      "date"       : "2017-05-23 00:00:00 +0200",
+      "shortdate"  : "May 23, 2017"
+    } 
+  
+]

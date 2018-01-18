@@ -1,3 +1,0 @@
-# privazio.github.io
-
-Privazio Website, coming soon...
