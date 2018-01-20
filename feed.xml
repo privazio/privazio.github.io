@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-01-18T22:22:10+01:00</updated><id>http://localhost:4000/</id><title type="html">Privazio</title><subtitle>A data-center class private cloud.</subtitle><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><entry><title type="html">New library: python bindings for opennebula</title><link href="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/" rel="alternate" type="text/html" title="New library: python bindings for opennebula" /><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><id>http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula</id><content type="html" xml:base="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/">&lt;h1 id=&quot;heading-open-nebula-python-bindings&quot;&gt;Open Nebula Python Bindings&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-01-20T12:03:40+01:00</updated><id>http://localhost:4000/</id><title type="html">Privazio</title><subtitle>A data-center class private cloud.</subtitle><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><entry><title type="html">New library: python bindings for opennebula</title><link href="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/" rel="alternate" type="text/html" title="New library: python bindings for opennebula" /><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><id>http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula</id><content type="html" xml:base="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/">&lt;h1 id=&quot;heading-open-nebula-python-bindings&quot;&gt;Open Nebula Python Bindings&lt;/h1&gt;
 &lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; is a fantastic cloud management platform that incorporates
 a key feature: &lt;em&gt;simplicity&lt;/em&gt;.&lt;/p&gt;
 
@@ -149,14 +149,14 @@ equipment renting, hardware failures. It was pretty cool!&lt;/p&gt;
 &lt;p&gt;Then came Snowden revelations and the &lt;em&gt;&quot;collect everything&quot;&lt;/em&gt; motto shocking the whole world. It became clear that it is
 fairly irresponsible to blindly hand control of data to third parties.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/personal-data.jpg&quot; alt=&quot;Personal Data&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/personal-data.jpg&quot; alt=&quot;Personal Data&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;All those &quot;free&quot; services are paid in privacy currency.&lt;/p&gt;
 
 &lt;p&gt;As our lives become increasingly digital, it is very hard to understand the
 ramifications of handing our privacy.&lt;/p&gt;
 
-&lt;p&gt;We need to regain digital independence, and take back control of our own data.&lt;/p&gt;
+&lt;p&gt;We need to regain digital independence and take back control of our own data.&lt;/p&gt;
 
 &lt;h2 id=&quot;heading-a-first-attempt&quot;&gt;A first attempt&lt;/h2&gt;
 
@@ -186,7 +186,7 @@ hundreds of containers. Lots of automation code…&lt;/p&gt;
 
 &lt;p&gt;During the past few years industry has been quickly converging with the vision above.
 On the hardware front, single board computers are increasingly powerful partly driven
-by mobile computing, affordable phones can now pack 8 CPUs and 6 GBs of RAM, powerful
+by mobile computing. Affordable phones can now pack 8 CPUs and 6 GBs of RAM, that is powerful
 enough to provide digital presence to most of us.&lt;/p&gt;
 
 &lt;p&gt;On the software front, exciting platforms such as &lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;Open Nebula&lt;/a&gt; can deliver
@@ -200,6 +200,6 @@ packaged as a private cloud, capable of running on entry level, fanless hardware
 powerful enough to serve most families and small businesses.&lt;/p&gt;
 
 &lt;p&gt;Privazio should make it trivial to establish and maintain digital presence by means of email, webs,
-blogs, forums, wikies… while retaining control of data, privacy. s&lt;/p&gt;
+blogs, forums, wikies… while retaining control of data, privacy.&lt;/p&gt;
 
 &lt;p&gt;Between performance and privacy, privazio must chose the latter.&lt;/p&gt;</content><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><category term="privazio" /><category term="cloud" /><summary type="html">Today, I have decided to start Privazio, a private cloud for residential users, startups or workgroups with a special focus on privacy.</summary></entry></feed>
