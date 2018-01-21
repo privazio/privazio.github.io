@@ -1,16 +1,16 @@
 [
   
     {
-      "title"      : "New library: python bindings for opennebula",
+      "title"      : "Pyone: Python bindings for Open Nebula",
       "categories" : "sdk",
-      "tags"     : "python, opennebula, api",
+      "tags"     : "python, opennebula, api, ansible",
       "url"        : "/blog/2018/01/06/python-bindins-for-opennebula/",
       "date"       : "2018-01-06 00:00:00 +0100",
       "shortdate"  : "January 06, 2018"
     } ,
   
     {
-      "title"      : "New package: native Handlebars for Alpine Linux",
+      "title"      : "New package: Native Handlebars for Alpine Linux",
       "categories" : "tools",
       "tags"     : "linux, alpine, images, container, docker, C",
       "url"        : "/blog/2017/07/26/handlebars-for-apine/",

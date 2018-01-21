@@ -1,25 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-01-20T12:03:40+01:00</updated><id>http://localhost:4000/</id><title type="html">Privazio</title><subtitle>A data-center class private cloud.</subtitle><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><entry><title type="html">New library: python bindings for opennebula</title><link href="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/" rel="alternate" type="text/html" title="New library: python bindings for opennebula" /><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><id>http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula</id><content type="html" xml:base="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/">&lt;h1 id=&quot;heading-open-nebula-python-bindings&quot;&gt;Open Nebula Python Bindings&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-01-21T20:46:52+01:00</updated><id>http://localhost:4000/</id><title type="html">Privazio</title><subtitle>A data-center class private cloud.</subtitle><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><entry><title type="html">Pyone: Python bindings for Open Nebula</title><link href="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/" rel="alternate" type="text/html" title="Pyone: Python bindings for Open Nebula" /><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><id>http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula</id><content type="html" xml:base="http://localhost:4000/blog/2018/01/06/python-bindins-for-opennebula/">&lt;h1 id=&quot;heading-why-pyone&quot;&gt;Why Pyone?&lt;/h1&gt;
+
+&lt;p&gt;After years running my own private cloud home and at my startup company, I decided
+to &lt;a href=&quot;/blog/2017/05/23/starting-privazio/&quot; title=&quot;Starting Privazio!&quot;&gt;start privazio&lt;/a&gt;. Privazio is a data-center class private cloud targeting residential
+users and small companies with a special focus on privacy. Privazio is currently under development.&lt;/p&gt;
+
 &lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; is a fantastic cloud management platform that incorporates
-a key feature: &lt;em&gt;simplicity&lt;/em&gt;.&lt;/p&gt;
+the one key feature that &lt;a href=&quot;/blog/2017/05/23/starting-privazio/&quot; title=&quot;Starting Privazio!&quot;&gt;Privazio&lt;/a&gt; requires most: &lt;em&gt;simplicity&lt;/em&gt;. &lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt;
+has also a pretty reasonable entry-level hardware requirements.
+&lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; is then the ideal foundation for &lt;a href=&quot;/blog/2017/05/23/starting-privazio/&quot; title=&quot;Starting Privazio!&quot;&gt;Privazio&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; seems the ideal cloud engine for &lt;a href=&quot;/blog/2017/05/23/starting-privazio/&quot; title=&quot;Starting Privazio!&quot;&gt;Privazio&lt;/a&gt;.
-In fact I was very happy to see that there is a similar
-project already out there: &lt;a target=&quot;_blank&quot; href=&quot;http://clox.cloud&quot; title=&quot;Get Your Cloud Just In A Box&quot;&gt;clox.cloud&lt;/a&gt; that can run OpenNebula
-on two &lt;a target=&quot;_blank&quot; href=&quot;https://www.raspberrypi.org/&quot; title=&quot;Teach learn and make with Rasberry Pi&quot;&gt;Raspbery Pi 3&lt;/a&gt; using lightweight virtualization from &lt;a target=&quot;_blank&quot; href=&quot;https://linuxcontainers.org/&quot; title=&quot;Infrastructure for container projects&quot;&gt;LXD&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It would be great to take simplicity further by providing an &lt;a target=&quot;_blank&quot; href=&quot;https://www.ansible.com/&quot; title=&quot;Ansible: Simple IT Automation&quot;&gt;Ansible&lt;/a&gt; module to manage &lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt;. Any other functionality provided by Privazio will also be managed through Ansible
+making everything fit together nicely.&lt;/p&gt;
 
-&lt;p&gt;I want to use &lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; as the Cloud Management platform for Privazio, however, I also want
-to automate its configuration with &lt;a target=&quot;_blank&quot; href=&quot;https://www.ansible.com/&quot; title=&quot;Ansible: Simple IT Automation&quot;&gt;Ansible&lt;/a&gt;. Ansible plugins will therefore
-be required.&lt;/p&gt;
+&lt;p&gt;In order to develop an &lt;a target=&quot;_blank&quot; href=&quot;https://www.ansible.com/&quot; title=&quot;Ansible: Simple IT Automation&quot;&gt;Ansible&lt;/a&gt; module we need a robust Python API for OpenNebula.
+This is not an easy task considering that OpenNebula is constantly being improved and its interfaces
+are likely to evolve.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://opennebula.org/&quot; title=&quot;OpenNebula: Flexible Enterprise Cloud Made Simple&quot;&gt;OpenNebula&lt;/a&gt; is very actively been developed, and as such APIs do change. However, OpenNebula XML-RPC
-API includes XSD specifications.&lt;/p&gt;
+&lt;h1 id=&quot;heading-introducing-pyone&quot;&gt;Introducing Pyone&lt;/h1&gt;
 
-&lt;p&gt;Pyone has been developed with maintainability in mind, it uses proxy objects and binding generators
-so that it will be easy to maintain as OpenNebula further evolves.&lt;/p&gt;
+&lt;p&gt;Pyone is a Python API for OpenNebula developed with two key goals in mind: Maintainability and Completeness.&lt;/p&gt;
 
-&lt;p&gt;Pyone will be used to implement &lt;a target=&quot;_blank&quot; href=&quot;https://www.ansible.com/&quot; title=&quot;Ansible: Simple IT Automation&quot;&gt;Ansible&lt;/a&gt; modules for cloud management.&lt;/p&gt;
+&lt;p&gt;OpenNebula provides a robust XML-RPC API for which XML Schema Definition (XSD) files are distributed.&lt;/p&gt;
 
-&lt;p&gt;Checkout &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/privazio/pyone&quot; title=&quot;Open Nebula XML-RPC Python Bindings&quot;&gt;Pyone in Github!&lt;/a&gt;&lt;/p&gt;</content><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><category term="python" /><category term="opennebula" /><category term="api" /><summary type="html">Open Nebula Python Bindings OpenNebula is a fantastic cloud management platform that incorporates a key feature: simplicity.</summary></entry><entry><title type="html">New package: native Handlebars for Alpine Linux</title><link href="http://localhost:4000/blog/2017/07/26/handlebars-for-apine/" rel="alternate" type="text/html" title="New package: native Handlebars for Alpine Linux" /><published>2017-07-26T00:00:00+02:00</published><updated>2017-07-26T00:00:00+02:00</updated><id>http://localhost:4000/blog/2017/07/26/handlebars-for-apine</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/26/handlebars-for-apine/">&lt;h2 id=&quot;heading-configuring-docker-images&quot;&gt;Configuring Docker Images&lt;/h2&gt;
+&lt;p&gt;Pyone uses the Schema Definition files to auto-generate the Python Bydings with &lt;a href=&quot;http://pyxb.sourceforge.net/&quot; title=&quot;PyXB: Python XML Schema Bindings¶&quot;&gt;PyXB&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, OpenNebula's XML-RPC API is consistent in the way in which calls are made, data is returned and errors are triggered. This allows for Pyone to subclass Python's xmlrpc.ServerProxy class implementing all OpenNebula peculiarities
+in one go: authentication, error conditions, special data types, etc.&lt;/p&gt;
+
+&lt;p&gt;By auto-generating the bindings and subclassing the proxy object maintainability
+and completeness should be achieved. In theory future OpenNebula releases would only require updating the XSD files and
+regenerating the bindings.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, making client calls and navigating the results match 100% the provided Open Nebula XML-RPC
+documentation.&lt;/p&gt;
+
+&lt;p&gt;Client code created with Pyone looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyone&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pyone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OneServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://one/RPC2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;oneadmin:onepass&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hostpool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;one&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hostpool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;host&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hostpool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HOST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ID&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'TEMPLATE'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;'NAME'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'abc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;'MEMORY'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'1024'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;'ATT1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'value1'&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Checkout &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/privazio/pyone&quot; title=&quot;Open Nebula XML-RPC Python Bindings&quot;&gt;Pyone in Github!&lt;/a&gt;&lt;/p&gt;</content><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><category term="python" /><category term="opennebula" /><category term="api" /><category term="ansible" /><summary type="html">Why Pyone?</summary></entry><entry><title type="html">New package: Native Handlebars for Alpine Linux</title><link href="http://localhost:4000/blog/2017/07/26/handlebars-for-apine/" rel="alternate" type="text/html" title="New package: Native Handlebars for Alpine Linux" /><published>2017-07-26T00:00:00+02:00</published><updated>2017-07-26T00:00:00+02:00</updated><id>http://localhost:4000/blog/2017/07/26/handlebars-for-apine</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/26/handlebars-for-apine/">&lt;h2 id=&quot;heading-configuring-docker-images&quot;&gt;Configuring Docker Images&lt;/h2&gt;
 
 &lt;p&gt;Docker images are great because they encapsulate services making them easy to
 distribute and deploy.&lt;/p&gt;
@@ -96,14 +132,14 @@ Those images are being installed around the globe, yet it is impossible to know 
 is it that you are ultimately downloading and whether it comes from the claimed source or not.
 Even in the case of &quot;Official&quot; images.&lt;/p&gt;
 
-&lt;p&gt;Alpine Linux provides metada and digital signatures for all their downloads.&lt;/p&gt;
+&lt;p&gt;Alpine Linux provides metadata and digital signatures for all their downloads.&lt;/p&gt;
 
 &lt;p&gt;If you produce images or containers based on Alpine Linux, this utility could help
 you:&lt;/p&gt;
 
 &lt;h2 id=&quot;heading-alpine-linux-release-info&quot;&gt;Alpine Linux Release Info&lt;/h2&gt;
 
-&lt;p&gt;Command line utility to query Alpine Linux's distribution tree.&lt;/p&gt;
+&lt;p&gt;It is a command line utility to query Alpine Linux's distribution tree.&lt;/p&gt;
 
 &lt;p&gt;The targeted use case is the continuous delivery of products based on Alpine Linux such as Docker Images.&lt;/p&gt;
 
@@ -137,7 +173,7 @@ startups or workgroups with a special focus on privacy.&lt;/p&gt;
 
 &lt;h2 id=&quot;heading-background-and-motivation&quot;&gt;Background and motivation&lt;/h2&gt;
 
-&lt;p&gt;Why Pivazio?&lt;/p&gt;
+&lt;p&gt;Why Privazio?&lt;/p&gt;
 
 &lt;p&gt;At first, it was cool! You could just buy a domain name, setup Google Apps, open
 a few accounts here and there and you had a decent online presence for your startup
@@ -154,7 +190,7 @@ fairly irresponsible to blindly hand control of data to third parties.&lt;/p&gt;
 &lt;p&gt;All those &quot;free&quot; services are paid in privacy currency.&lt;/p&gt;
 
 &lt;p&gt;As our lives become increasingly digital, it is very hard to understand the
-ramifications of handing our privacy.&lt;/p&gt;
+ramifications of handing over our privacy.&lt;/p&gt;
 
 &lt;p&gt;We need to regain digital independence and take back control of our own data.&lt;/p&gt;
 
@@ -166,7 +202,7 @@ computer hardware will once again decentralize computing.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;It was very nice to hear historic VCs making this argument despite the hype and
-commercial success of pubic clouds.&lt;/p&gt;
+commercial success of public clouds.&lt;/p&gt;
 
 &lt;p&gt;Once the &lt;a target=&quot;_blank&quot; href=&quot;https://www.raspberrypi.org/&quot; title=&quot;Teach learn and make with Rasberry Pi&quot;&gt;Raspberry Pi&lt;/a&gt; first came out I understood that it would not take long
 before the previous statement would materialize in some shape or form, so I started
@@ -196,10 +232,13 @@ private, enterprise-class cloud computing and simplicity at the same time. &lt;a
 &lt;h2 id=&quot;heading-what-privazio-should-be&quot;&gt;What Privazio should be&lt;/h2&gt;
 
 &lt;p&gt;Privazio should be an open source community effort to regain digital independence,
-packaged as a private cloud, capable of running on entry level, fanless hardware,
+packaged as a private cloud, capable of running on affordable, fanless hardware,
 powerful enough to serve most families and small businesses.&lt;/p&gt;
 
 &lt;p&gt;Privazio should make it trivial to establish and maintain digital presence by means of email, webs,
 blogs, forums, wikies… while retaining control of data, privacy.&lt;/p&gt;
+
+&lt;p&gt;Privazio is not meant to be a substitute to existing cloud management tools and platforms, but rather
+adapt them to the target public and make them easy to adopt.&lt;/p&gt;
 
 &lt;p&gt;Between performance and privacy, privazio must chose the latter.&lt;/p&gt;</content><author><name>Rafael del Valle</name><email>rvalle@privaz.io</email></author><category term="privazio" /><category term="cloud" /><summary type="html">Today, I have decided to start Privazio, a private cloud for residential users, startups or workgroups with a special focus on privacy.</summary></entry></feed>
