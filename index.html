@@ -20,11 +20,9 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="A data-center class private cloud." />
 <meta property="og:description" content="A data-center class private cloud." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Privazio" />
 <script type="application/ld+json">
-{"name":"Privazio","description":"A data-center class private cloud.","author":{"@type":"Person","name":"Rafael del Valle"},"@type":"WebSite","url":"http://localhost:4000/","headline":"Privazio","@context":"http://schema.org"}</script>
+{"name":"Privazio","description":"A data-center class private cloud.","author":{"@type":"Person","name":"Rafael del Valle"},"@type":"WebSite","url":"/","headline":"Privazio","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <meta name="keywords" content="" />
@@ -33,7 +31,7 @@
 
 
 
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Privazio" />
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Privazio" />
     <link href='/assets/stylesheets/home.css' rel="stylesheet" type="text/css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script>window.Modernizr || document.write('<script src="/assets/javascripts/modernizr-2.8.3.min.js"><\/script>')</script>
@@ -47,6 +45,26 @@
 <script>
     window.Pace || document.write('<script src="/assets/javascripts/pace.min.js"><\/script>')
 </script>
+
+
+    
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setCookieDomain", "*.privaz.io"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.privaz.io/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '5']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 
 
 </head>
@@ -143,6 +161,20 @@
 
 </script>
 
+
+<script>
+    $("[class^='btn']").on('click', function () {
+        var label = this.textContent;
+        if (this.title !== '') {
+            label = this.title;
+        }
+        if (this.getAttribute('data-ga') !== null) {
+            label = this.getAttribute('data-ga');
+        }
+        ga('send', 'event', 'Homepage Links', 'Click', label.trim());
+    });
+
+</script>
 
 </body>
 
